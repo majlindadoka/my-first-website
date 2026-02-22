@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Weather App | Junior Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-card">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div class="weather-info" id="weather-info">
+            <h2 id="city-name">Tirana</h2>
+            <p id="description">Sunny</p>
+            <div class="temp-container">
+                <span id="temperature">24</span>°C
+            </div>
+            <div class="details">
+                <span>Humidity: <b id="humidity">40%</b></span>
+                <span>Wind: <b id="wind">12 km/h</b></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+/* Resetimi i stilit */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background: #ff8c00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e67e00;
+    transform: scale(1.05);
+}
+
+.temp-container {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
